@@ -15,6 +15,11 @@ export default function LoginPage() {
       return;
     }
 
+    if (password === "12345") {
+      navigate("/failure", { state: { customer } });
+      return;
+    }
+
     setError("");
     navigate("/success", { state: { customer } });
   }
